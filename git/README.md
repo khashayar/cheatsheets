@@ -123,6 +123,50 @@ Revert the changes (untracked files and folders)
 git clean -df
 ```
 
+#### Stash
+
+Stashing takes the dirty state of your working directory — that is, your modified
+tracked files and staged changes — and saves it on a stack of unfinished changes
+that you can reapply at any time.
+```bash
+git stash
+```
+
+To include untracked files in the stash
+ ```bash
+ git stash -u
+ ```
+
+To see which stashes are stored
+```bash
+git stash list
+```
+
+To apply the most recent stash
+```bash
+git stash apply
+```
+
+To apply one of the older stashes, you can specify it by naming it
+```bash
+git stash apply stash@{2}
+```
+
+To apply the most recent stash and then immediately drop it from your stack
+```bash
+git stash pop
+```
+
+To remove a stash
+```bash
+git stash drop stash@{2}
+```
+
+Creating a branch from a stash
+```bash
+git stash branch branchName
+```
+
 <br />
 
 ## Remotes

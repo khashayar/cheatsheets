@@ -101,6 +101,11 @@ stage all files, shortcut for previous two command
 git add -A
 ```
 
+track files, without actually adding their content (`--intent-to-add`). This is useful for, i.e. showing the unstaged content of such files with `git diff`
+```bash
+git add -N
+```
+
 #### Revert
 
 Replace file's current content with the last committed

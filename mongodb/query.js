@@ -24,3 +24,10 @@ db.collectionName.update(
   { $unset: { userId: '' } },
   { multi: true }
 );
+
+// replace a given value in an array
+db.collectionName.update(
+  { fieldName: 'value' },
+  { $set: { "fieldName.$" : 'newValue' } },
+  { multi: true }
+)
